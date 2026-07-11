@@ -1001,13 +1001,22 @@
 
         function registrarClickPedido(nombre, marca, precio) {
             if (!URL_REGISTRO_CLICKS) return; // Aún no configurado: no hace nada.
+            const datos = JSON.stringify({ nombre, marca, precio });
             try {
-                fetch(URL_REGISTRO_CLICKS, {
-                    method: "POST",
-                    mode: "no-cors", // Apps Script no necesita respuesta visible aquí.
-                    headers: { "Content-Type": "text/plain" },
-                    body: JSON.stringify({ nombre, marca, precio })
-                });
+                if (navigator.sendBeacon) {
+                    // sendBeacon está hecho justo para esto: mandar datos justo antes
+                    // de que el navegador abra otra pestaña, sin bloquear ni depender
+                    // de que la página siga abierta.
+                    const blob = new Blob([datos], { type: "text/plain;charset=UTF-8" });
+                    navigator.sendBeacon(URL_REGISTRO_CLICKS, blob);
+                } else {
+                    fetch(URL_REGISTRO_CLICKS, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "text/plain" },
+                        body: datos
+                    });
+                }
             } catch (e) {
                 // Si falla el registro, no debe afectar la experiencia de compra.
             }
@@ -1118,11 +1127,18 @@
                             ${fmtQ(p.precio)}
                         </span>
                     </div>
-                    <a href="${whatsappUrl}" target="_blank" onclick="registrarClickPedido(${JSON.stringify(p.nombre)}, ${JSON.stringify(p.marca)}, ${p.precio})" class="bg-dorado-500 hover:bg-dorado-400 text-violeta-950 font-bold px-4 py-2.5 rounded-lg text-xs transition-all flex items-center gap-1.5 uppercase tracking-wide">
+                    <a href="${whatsappUrl}" target="_blank" data-pedir-id="${p.id}" class="bg-dorado-500 hover:bg-dorado-400 text-violeta-950 font-bold px-4 py-2.5 rounded-lg text-xs transition-all flex items-center gap-1.5 uppercase tracking-wide">
                         <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
                     </a>
                 </div>
             `;
+
+            const botonPedir = card.querySelector(`[data-pedir-id="${p.id}"]`);
+            if (botonPedir) {
+                botonPedir.addEventListener("click", () => {
+                    registrarClickPedido(p.nombre, p.marca, p.precio);
+                });
+            }
 
             return card;
         }
