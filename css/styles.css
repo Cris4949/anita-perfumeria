@@ -1,0 +1,64 @@
+/* ============================================================
+   Anita Perfumería — Estilos personalizados
+   (Complementa a Tailwind CSS, cargado vía CDN en index.html)
+   ============================================================ */
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #140127; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+
+.gold-shimmer {
+    background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.silk-bg {
+    background-color: #2E0854;
+    background-image: radial-gradient(circle at 10% 20%, rgba(46, 8, 84, 0.9) 0%, rgba(20, 1, 39, 1) 90%);
+    position: relative;
+}
+
+.silk-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.card-enter {
+    animation: cardIn .5s ease both;
+}
+
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+input:focus-visible, select:focus-visible, a:focus-visible, button:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.09) 37%, rgba(255,255,255,0.04) 63%);
+    background-size: 400% 100%;
+    animation: shimmerLoad 1.4s ease infinite;
+}
+
+@keyframes shimmerLoad {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+/* Placeholder de imagen mientras carga de forma perezosa (lazy loading) */
+.img-lazy-wrap {
+    background: linear-gradient(90deg, rgba(0,0,0,0.03) 25%, rgba(0,0,0,0.07) 37%, rgba(0,0,0,0.03) 63%);
+    background-size: 400% 100%;
+    animation: shimmerLoad 1.4s ease infinite;
+}
+.img-lazy-wrap.loaded {
+    animation: none;
+    background: none;
+}
