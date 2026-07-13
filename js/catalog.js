@@ -37,6 +37,34 @@ function populateBrandFilter() {
         opt.textContent = marca;
         brandSelect.appendChild(opt);
     });
+    poblarMarcasFooter(marcas);
+}
+
+// Genera los enlaces de marca visibles en el footer (ver index.html,
+// #brandLinksFooter). Es texto real, visible y útil para el cliente —
+// no es texto oculto — que de paso asocia cada marca con "Guatemala".
+function poblarMarcasFooter(marcas) {
+    const contenedor = document.getElementById("brandLinksFooter");
+    if (!contenedor) return;
+    contenedor.innerHTML = "";
+    marcas.forEach((marca, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.textContent = `${marca} en Guatemala`;
+        btn.className = "hover:text-dorado-400 underline decoration-dorado-500/30 underline-offset-2 transition-colors";
+        btn.addEventListener("click", () => {
+            brandSelect.value = marca;
+            renderCatalogo();
+            document.getElementById("productos").scrollIntoView({ behavior: "smooth" });
+        });
+        contenedor.appendChild(btn);
+        if (i < marcas.length - 1) {
+            const sep = document.createElement("span");
+            sep.textContent = "·";
+            sep.className = "text-crema-100/20";
+            contenedor.appendChild(sep);
+        }
+    });
 }
 
 function renderPriceChips() {
@@ -72,8 +100,12 @@ function buildCard(p, index) {
 
     // Carga perezosa (lazy loading): las imágenes solo se piden al navegador
     // cuando la tarjeta está cerca del viewport, así la carga inicial es liviana.
+    // El alt describe la imagen real (marca + nombre + "Guatemala"): ayuda a
+    // personas con lector de pantalla y, de paso, a que Google entienda el
+    // contenido de cada foto para búsquedas locales — sin agregar nada visible.
+    const altTexto = `${p.nombre} de ${p.marca} - Perfume original en Guatemala`;
     const imageBlock = p.imagen
-        ? `<img src="${p.imagen}" alt="${p.nombre}" loading="lazy" decoding="async"
+        ? `<img src="${p.imagen}" alt="${altTexto}" title="${p.nombre} - ${p.marca}" loading="lazy" decoding="async"
                 class="max-h-full max-w-full object-contain group-hover:scale-105 transition-all duration-500 mix-blend-multiply"
                 onerror="handleImageError(this)">`
         : `<div class="text-center text-dorado-400">
