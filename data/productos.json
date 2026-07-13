@@ -3,11 +3,13 @@
     "id": 1,
     "nombre": "Odyssey Mandarin Sky",
     "marca": "Armaf",
-    "precio": 475,
+    "precio": 400,
     "aroma": "Mandarina, naranja, azafrán, caramelo y haba tonka",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/1.jpg"
+    "imagen": "images/productos/1.jpg",
+    "precioOriginal": 475,
+    "oferta": true
   },
   {
     "id": 2,
@@ -23,11 +25,13 @@
     "id": 3,
     "nombre": "Odyssey Limoni",
     "marca": "Armaf",
-    "precio": 375,
+    "precio": 320,
     "aroma": "Limón intenso, bergamota, jazmín y cedro",
     "duracion": "4 - 6 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/3.jpg"
+    "imagen": "images/productos/3.jpg",
+    "precioOriginal": 375,
+    "oferta": true
   },
   {
     "id": 4,
@@ -73,11 +77,13 @@
     "id": 8,
     "nombre": "Club De Nuit Intense Man",
     "marca": "Armaf",
-    "precio": 450,
+    "precio": 380,
     "aroma": "Manzana, bergamota, grosella negra, piña y limón, con rosa, abedul y jazmín, sobre almizcle, ámbar gris, pachulí y vainilla",
     "duracion": "8 - 10 Horas",
     "ml": "105 ml",
-    "imagen": "images/productos/8.jpg"
+    "imagen": "images/productos/8.jpg",
+    "precioOriginal": 450,
+    "oferta": true
   },
   {
     "id": 9,
@@ -143,21 +149,25 @@
     "id": 15,
     "nombre": "Asad Elixir",
     "marca": "Lattafa",
-    "precio": 500,
+    "precio": 430,
     "aroma": "Pimienta rosa, azafrán y toronja, con tabaco, cedro y vainilla, sobre pachulí, olíbano, cashmerán y ámbar seco",
     "duracion": "10 - 12 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/15.jpg"
+    "imagen": "images/productos/15.jpg",
+    "precioOriginal": 500,
+    "oferta": true
   },
   {
     "id": 16,
     "nombre": "Yara Elixir",
     "marca": "Lattafa",
-    "precio": 500,
+    "precio": 430,
     "aroma": "Fresa s'mores y grosella negra, con jazmín y azahar, sobre vainilla, caramelo, ámbar y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/16.jpg"
+    "imagen": "images/productos/16.jpg",
+    "precioOriginal": 500,
+    "oferta": true
   },
   {
     "id": 17,
@@ -316,7 +326,7 @@
     "precio": 925,
     "aroma": "Piña, iris, jengibre y ciprés, con coco y notas amaderadas, sobre haba tonka, sándalo, ámbar y ámbar gris",
     "duracion": "10 - 12 Horas",
-    "ml": "125 ml",
+    "ml": "75 ml",
     "imagen": "images/productos/32.jpg"
   },
   {
@@ -683,11 +693,13 @@
     "id": 69,
     "nombre": "Tag-Her",
     "marca": "Armaf",
-    "precio": 390,
+    "precio": 320,
     "aroma": "Bergamota, neroli y pimienta rosa, con azahar, jazmín, rosa, madreselva e iris, sobre vainilla, almizcle, caramelo y láudano",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/69.jpg"
+    "imagen": "images/productos/69.jpg",
+    "precioOriginal": 390,
+    "oferta": true
   },
   {
     "id": 70,
