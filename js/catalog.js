@@ -85,11 +85,19 @@ function buildCard(p, index) {
         ? "h-64 bg-white relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10"
         : "h-64 bg-violeta-950/30 relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10";
 
+    // Badge de OFERTA en la esquina superior derecha, para productos en promoción.
+    const ofertaBadge = p.oferta
+        ? `<div class="absolute top-4 right-4 z-10 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold shadow-lg animate-pulse">
+                Oferta
+           </div>`
+        : "";
+
     card.innerHTML = `
         <div>
             <div class="absolute top-4 left-4 z-10 bg-violeta-950/80 border border-dorado-500/30 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold text-dorado-400">
                 ${p.marca}
             </div>
+            ${ofertaBadge}
 
             <div class="${imageWrapperClass}">
                 ${imageBlock}
@@ -111,9 +119,18 @@ function buildCard(p, index) {
         <div class="px-6 pb-6 pt-2 border-t border-dorado-500/10 flex items-center justify-between">
             <div>
                 <span class="text-xs text-crema-100/40 uppercase block tracking-wider">Precio</span>
+                ${p.oferta ? `
+                <span class="text-sm text-crema-100/50 line-through block leading-tight">
+                    ${fmtQ(p.precioOriginal)}
+                </span>
+                <span class="text-2xl font-serif font-bold text-red-500">
+                    ${fmtQ(p.precio)}
+                </span>
+                ` : `
                 <span class="text-2xl font-serif font-bold text-dorado-400">
                     ${fmtQ(p.precio)}
                 </span>
+                `}
             </div>
             <a href="${whatsappUrl}" target="_blank" data-pedir-id="${p.id}" class="bg-dorado-500 hover:bg-dorado-400 text-violeta-950 font-bold px-4 py-2.5 rounded-lg text-xs transition-all flex items-center gap-1.5 uppercase tracking-wide">
                 <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
@@ -169,9 +186,14 @@ function getFilteredSorted() {
         );
     });
 
-    // Orden alfabético por nombre: mucho más fácil de escanear que el
-    // orden en que se fueron agregando los productos al catálogo.
-    list = [...list].sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
+    // Las fragancias en oferta siempre suben al inicio de la lista para llamar
+    // más la atención; dentro de cada grupo (ofertas / resto) se ordena alfabético.
+    list = [...list].sort((a, b) => {
+        const aOferta = a.oferta ? 1 : 0;
+        const bOferta = b.oferta ? 1 : 0;
+        if (aOferta !== bOferta) return bOferta - aOferta;
+        return a.nombre.localeCompare(b.nombre, "es");
+    });
 
     return list;
 }
