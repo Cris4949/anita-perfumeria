@@ -124,7 +124,7 @@
     "duracion": "6 - 8 Horas",
     "ml": "106 ml",
     "imagen": "images/productos/11.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": 12,
