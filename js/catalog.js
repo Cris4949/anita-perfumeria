@@ -94,7 +94,10 @@ function buildCard(p, index) {
     const card = document.createElement("div");
     card.className = "card-enter group relative bg-violeta-900/60 rounded-xl border border-dorado-500/20 overflow-hidden shadow-lg transition-all duration-300 hover:border-dorado-500/60 hover:shadow-2xl hover:shadow-dorado-500/10 hover:-translate-y-1 flex flex-col justify-between";
     card.style.animationDelay = (index * 40) + "ms";
+    if (p.agotado) card.classList.add("opacity-80");
 
+    // El texto de WhatsApp solo se arma si hay precio (producto disponible);
+    // si está agotado, el botón ni se genera como enlace.
     const whatsappText = `Hola Anita Perfumería, me interesa adquirir el perfume "${p.nombre}" con el precio de ${fmtQ(p.precio)}. ¿Tienen disponibilidad para coordinar la entrega?`;
     const whatsappUrl = `https://wa.me/50253394448?text=${encodeURIComponent(whatsappText)}`;
 
@@ -104,9 +107,11 @@ function buildCard(p, index) {
     // personas con lector de pantalla y, de paso, a que Google entienda el
     // contenido de cada foto para búsquedas locales — sin agregar nada visible.
     const altTexto = `${p.nombre} de ${p.marca} - Perfume original en Guatemala`;
+    const imgClase = "max-h-full max-w-full object-contain transition-all duration-500 mix-blend-multiply"
+        + (p.agotado ? " grayscale" : " group-hover:scale-105");
     const imageBlock = p.imagen
         ? `<img src="${p.imagen}" alt="${altTexto}" title="${p.nombre} - ${p.marca}" loading="lazy" decoding="async"
-                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-all duration-500 mix-blend-multiply"
+                class="${imgClase}"
                 onerror="handleImageError(this)">`
         : `<div class="text-center text-dorado-400">
                 <i class="fa-solid fa-droplet text-5xl mb-2 block"></i>
@@ -117,12 +122,49 @@ function buildCard(p, index) {
         ? "h-64 bg-white relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10"
         : "h-64 bg-violeta-950/30 relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10";
 
-    // Badge de OFERTA en la esquina superior derecha, para productos en promoción.
-    const ofertaBadge = p.oferta
+    // Overlay "Agotado": se dibuja encima de la imagen sin tener que tocar
+    // el archivo de la foto ni volver a subirla.
+    const agotadoOverlay = p.agotado
+        ? `<div class="absolute inset-0 z-10 bg-violeta-950/70 flex items-center justify-center">
+                <span class="border-2 border-crema-100/70 text-crema-100 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest -rotate-6">
+                    Sin stock por el momento
+                </span>
+           </div>`
+        : "";
+
+    // Badge de OFERTA en la esquina superior derecha (no se muestra si el producto está agotado).
+    const ofertaBadge = (p.oferta && !p.agotado)
         ? `<div class="absolute top-4 right-4 z-10 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold shadow-lg animate-pulse">
                 Oferta
            </div>`
         : "";
+
+    // Bloque de precio: si está agotado, no se muestra ningún precio.
+    const precioBlock = p.agotado
+        ? `<span class="text-sm font-semibold text-crema-100/50 uppercase tracking-wide">No disponible por ahora</span>`
+        : (p.oferta ? `
+                <span class="text-xs text-crema-100/40 uppercase block tracking-wider">Precio</span>
+                <span class="text-sm text-crema-100/50 line-through block leading-tight">
+                    ${fmtQ(p.precioOriginal)}
+                </span>
+                <span class="text-2xl font-serif font-bold text-red-500">
+                    ${fmtQ(p.precio)}
+                </span>
+            ` : `
+                <span class="text-xs text-crema-100/40 uppercase block tracking-wider">Precio</span>
+                <span class="text-2xl font-serif font-bold text-dorado-400">
+                    ${fmtQ(p.precio)}
+                </span>
+            `);
+
+    // Botón de WhatsApp: deshabilitado (sin enlace, sin click) si está agotado.
+    const botonWhatsapp = p.agotado
+        ? `<span class="bg-violeta-900/60 text-crema-100/40 border border-dorado-500/10 font-bold px-4 py-2.5 rounded-lg text-xs flex items-center gap-1.5 uppercase tracking-wide cursor-not-allowed select-none">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Agotado
+           </span>`
+        : `<a href="${whatsappUrl}" target="_blank" data-pedir-id="${p.id}" class="bg-dorado-500 hover:bg-dorado-400 text-violeta-950 font-bold px-4 py-2.5 rounded-lg text-xs transition-all flex items-center gap-1.5 uppercase tracking-wide">
+                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
+           </a>`;
 
     card.innerHTML = `
         <div>
@@ -133,6 +175,7 @@ function buildCard(p, index) {
 
             <div class="${imageWrapperClass}">
                 ${imageBlock}
+                ${agotadoOverlay}
             </div>
 
             <div class="p-6 space-y-4">
@@ -150,23 +193,9 @@ function buildCard(p, index) {
 
         <div class="px-6 pb-6 pt-2 border-t border-dorado-500/10 flex items-center justify-between">
             <div>
-                <span class="text-xs text-crema-100/40 uppercase block tracking-wider">Precio</span>
-                ${p.oferta ? `
-                <span class="text-sm text-crema-100/50 line-through block leading-tight">
-                    ${fmtQ(p.precioOriginal)}
-                </span>
-                <span class="text-2xl font-serif font-bold text-red-500">
-                    ${fmtQ(p.precio)}
-                </span>
-                ` : `
-                <span class="text-2xl font-serif font-bold text-dorado-400">
-                    ${fmtQ(p.precio)}
-                </span>
-                `}
+                ${precioBlock}
             </div>
-            <a href="${whatsappUrl}" target="_blank" data-pedir-id="${p.id}" class="bg-dorado-500 hover:bg-dorado-400 text-violeta-950 font-bold px-4 py-2.5 rounded-lg text-xs transition-all flex items-center gap-1.5 uppercase tracking-wide">
-                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
-            </a>
+            ${botonWhatsapp}
         </div>
     `;
 
@@ -218,9 +247,13 @@ function getFilteredSorted() {
         );
     });
 
-    // Las fragancias en oferta siempre suben al inicio de la lista para llamar
-    // más la atención; dentro de cada grupo (ofertas / resto) se ordena alfabético.
+    // Orden: primero los disponibles (con las ofertas al frente de ese grupo),
+    // y hasta el final los que están agotados — así el cliente ve primero lo
+    // que sí puede comprar ahora mismo.
     list = [...list].sort((a, b) => {
+        const aAgotado = a.agotado ? 1 : 0;
+        const bAgotado = b.agotado ? 1 : 0;
+        if (aAgotado !== bAgotado) return aAgotado - bAgotado;
         const aOferta = a.oferta ? 1 : 0;
         const bOferta = b.oferta ? 1 : 0;
         if (aOferta !== bOferta) return bOferta - aOferta;
