@@ -107,11 +107,11 @@ function buildCard(p, index) {
     // personas con lector de pantalla y, de paso, a que Google entienda el
     // contenido de cada foto para búsquedas locales — sin agregar nada visible.
     const altTexto = `${p.nombre} de ${p.marca} - Perfume original en Guatemala`;
-    const imgClase = "max-h-full max-w-full object-contain transition-all duration-500 mix-blend-multiply"
+    const imgClase = "max-h-full max-w-full object-contain transition-all duration-500 mix-blend-multiply cursor-zoom-in"
         + (p.agotado ? " grayscale" : " group-hover:scale-105");
     const imageBlock = p.imagen
         ? `<img src="${p.imagen}" alt="${altTexto}" title="${p.nombre} - ${p.marca}" loading="lazy" decoding="async"
-                class="${imgClase}"
+                class="${imgClase}" data-lightbox-src="${p.imagen}"
                 onerror="handleImageError(this)">`
         : `<div class="text-center text-dorado-400">
                 <i class="fa-solid fa-droplet text-5xl mb-2 block"></i>
@@ -122,10 +122,10 @@ function buildCard(p, index) {
         ? "h-64 bg-white relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10"
         : "h-64 bg-violeta-950/30 relative flex items-center justify-center p-6 overflow-hidden border-b border-dorado-500/10";
 
-    // Overlay "Agotado": se dibuja encima de la imagen sin tener que tocar
-    // el archivo de la foto ni volver a subirla.
+    // pointer-events-none: el aviso de "agotado" es solo visual, así el clic
+    // pasa a través de él y la foto se puede seguir ampliando en el visor.
     const agotadoOverlay = p.agotado
-        ? `<div class="absolute inset-0 z-10 bg-violeta-950/70 flex items-center justify-center">
+        ? `<div class="absolute inset-0 z-10 bg-violeta-950/70 flex items-center justify-center pointer-events-none">
                 <span class="border-2 border-crema-100/70 text-crema-100 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest -rotate-6">
                     Sin stock por el momento
                 </span>
@@ -203,6 +203,14 @@ function buildCard(p, index) {
     if (botonPedir) {
         botonPedir.addEventListener("click", () => {
             registrarClickPedido(p.nombre, p.marca, p.precio);
+        });
+    }
+
+    // Clic en la foto: la abre en grande en el visor (con zoom y botón "Volver").
+    const imgEl = card.querySelector("[data-lightbox-src]");
+    if (imgEl && window.openLightbox) {
+        imgEl.addEventListener("click", () => {
+            window.openLightbox(p.imagen, `${p.nombre} · ${p.marca}`);
         });
     }
 
