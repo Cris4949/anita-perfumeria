@@ -9,7 +9,8 @@
     "ml": "100 ml",
     "imagen": "images/productos/1.jpg",
     "precioOriginal": 475,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "aroma": "Cítricos frescos, especias y fondo amaderado ambarado",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/2.jpg"
+    "imagen": "images/productos/2.jpg",
+    "agotado": false
   },
   {
     "id": 3,
@@ -31,7 +33,8 @@
     "ml": "100 ml",
     "imagen": "images/productos/3.jpg",
     "precioOriginal": 375,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "aroma": "Caramelo, frambuesa, jazmín, vainilla y ámbar",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/4.jpg"
+    "imagen": "images/productos/4.jpg",
+    "agotado": false
   },
   {
     "id": 5,
@@ -51,7 +55,8 @@
     "aroma": "Bergamota, notas amaderadas-nuez, salvia, coco, frutas tropicales, canela, ámbar, vainilla y haba tonka",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/5.jpg"
+    "imagen": "images/productos/5.jpg",
+    "agotado": false
   },
   {
     "id": 6,
@@ -61,7 +66,8 @@
     "aroma": "Mandarina y cítricos, con notas florales y especias cálidas, sobre ámbar y maderas",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/6.jpg"
+    "imagen": "images/productos/6.jpg",
+    "agotado": false
   },
   {
     "id": 7,
@@ -71,7 +77,8 @@
     "aroma": "Bergamota, azahar, lavanda, azafrán y ámbar",
     "duracion": "8 Horas",
     "ml": "106 ml",
-    "imagen": "images/productos/7.jpg"
+    "imagen": "images/productos/7.jpg",
+    "agotado": false
   },
   {
     "id": 8,
@@ -83,7 +90,8 @@
     "ml": "105 ml",
     "imagen": "images/productos/8.jpg",
     "precioOriginal": 450,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 9,
@@ -93,7 +101,8 @@
     "aroma": "Cítricos, flor prisma, polvo de estrellas, vainilla y maderas de terciopelo",
     "duracion": "7 - 9 Horas",
     "ml": "75 ml",
-    "imagen": "images/productos/9.jpg"
+    "imagen": "images/productos/9.jpg",
+    "agotado": false
   },
   {
     "id": 10,
@@ -103,7 +112,8 @@
     "aroma": "Durazno, toronja, litchi, jazmín, rosa y almizcle",
     "duracion": "6 Horas",
     "ml": "106 ml",
-    "imagen": "images/productos/10.jpg"
+    "imagen": "images/productos/10.jpg",
+    "agotado": false
   },
   {
     "id": 11,
@@ -113,7 +123,8 @@
     "aroma": "Bergamota, azafrán, grosella negra, almizcle y vainilla",
     "duracion": "6 - 8 Horas",
     "ml": "106 ml",
-    "imagen": "images/productos/11.jpg"
+    "imagen": "images/productos/11.jpg",
+    "agotado": false
   },
   {
     "id": 12,
@@ -123,7 +134,8 @@
     "aroma": "Toronja, limón, menta, pimienta rosa, jengibre, incienso y sándalo",
     "duracion": "8 - 10 Horas",
     "ml": "105 ml",
-    "imagen": "images/productos/12.jpg"
+    "imagen": "images/productos/12.jpg",
+    "agotado": false
   },
   {
     "id": 13,
@@ -133,7 +145,8 @@
     "aroma": "Bergamota, piña, pera, caramelo, cuero, ámbar y vainilla",
     "duracion": "12+ Horas",
     "ml": "55 ml",
-    "imagen": "images/productos/13.jpg"
+    "imagen": "images/productos/13.jpg",
+    "agotado": false
   },
   {
     "id": 14,
@@ -143,7 +156,8 @@
     "aroma": "Bergamota, manzana, sal marina, ylang ylang, jazmín, frutos rojos y vainilla",
     "duracion": "6 - 8 Horas",
     "ml": "55 ml",
-    "imagen": "images/productos/14.jpg"
+    "imagen": "images/productos/14.jpg",
+    "agotado": false
   },
   {
     "id": 15,
@@ -155,7 +169,8 @@
     "ml": "100 ml",
     "imagen": "images/productos/15.jpg",
     "precioOriginal": 500,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 16,
@@ -167,7 +182,8 @@
     "ml": "100 ml",
     "imagen": "images/productos/16.jpg",
     "precioOriginal": 500,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 17,
@@ -177,7 +193,8 @@
     "aroma": "Pimienta negra, tabaco y piña, con pachulí, café e iris, sobre vainilla, ámbar, madera seca, benjuí y láudano",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/17.jpg"
+    "imagen": "images/productos/17.jpg",
+    "agotado": false
   },
   {
     "id": 18,
@@ -187,7 +204,8 @@
     "aroma": "Grosella negra y mandarina verde, con gardenia y caramelo de fresa efervescente, sobre vainilla, almizcle, ámbar y sándalo",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/18.jpg"
+    "imagen": "images/productos/18.jpg",
+    "agotado": false
   },
   {
     "id": 19,
@@ -197,7 +215,8 @@
     "aroma": "Pera, pimienta rosa y grosella negra, con nardo, jazmín y almendra, sobre vainilla, cashmerán y pachulí",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/19.jpg"
+    "imagen": "images/productos/19.jpg",
+    "agotado": false
   },
   {
     "id": 20,
@@ -207,7 +226,8 @@
     "aroma": "Mango, coco y maracuyá, con jazmín, heliotropo y azahar, sobre vainilla, almizcle y cashmerán",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/20.jpg"
+    "imagen": "images/productos/20.jpg",
+    "agotado": false
   },
   {
     "id": 21,
@@ -217,7 +237,8 @@
     "aroma": "Grosella negra, manzana y azafrán, con lirio de los valles, jazmín y rosa damascena, sobre vainilla, almizcle blanco, ámbar gris y durazno",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/21.jpg"
+    "imagen": "images/productos/21.jpg",
+    "agotado": false
   },
   {
     "id": 22,
@@ -227,7 +248,8 @@
     "aroma": "Azúcar morena, caramelo y galleta, con vainilla, toffee y ámbar, sobre almizcle blanco y praliné",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/22.jpg"
+    "imagen": "images/productos/22.jpg",
+    "agotado": false
   },
   {
     "id": 23,
@@ -237,7 +259,8 @@
     "aroma": "Canela, nuez moscada y bergamota, con dátiles, praliné y tuberosa, sobre vainilla, haba tonka, madera de ámbar, mirra y benjuí",
     "duracion": "10 - 12 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/23.jpg"
+    "imagen": "images/productos/23.jpg",
+    "agotado": false
   },
   {
     "id": 24,
@@ -247,7 +270,8 @@
     "aroma": "Canela, cardamomo y jengibre, con praliné, frutos confitados y flores blancas, sobre vainilla, café, haba tonka, benjuí y almizcle",
     "duracion": "10 - 12 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/24.jpg"
+    "imagen": "images/productos/24.jpg",
+    "agotado": false
   },
   {
     "id": 25,
@@ -257,7 +281,8 @@
     "aroma": "Piña, bergamota y toronja, con pachulí, cedro y jazmín, sobre musgo de roble, maderas y ámbar",
     "duracion": "10+ Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/25.jpg"
+    "imagen": "images/productos/25.jpg",
+    "agotado": false
   },
   {
     "id": 26,
@@ -267,7 +292,8 @@
     "aroma": "Piña, naranja y toronja, con iris, ámbar y lavanda, sobre haba tonka, almizcle, pachulí y cashmerán",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/26.jpg"
+    "imagen": "images/productos/26.jpg",
+    "agotado": false
   },
   {
     "id": 27,
@@ -277,7 +303,8 @@
     "aroma": "Manzana, bergamota siciliana, limón italiano y anís estrellado, con ciruela, azahar y cardamomo, sobre musgo, almizcle, madera a la deriva y ámbar",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/27.jpg"
+    "imagen": "images/productos/27.jpg",
+    "agotado": false
   },
   {
     "id": 28,
@@ -287,7 +314,8 @@
     "aroma": "Limón, manzana, toronja y piña, con frambuesa, cuero, oud y azafrán, sobre musgo blanco, pachulí, ámbar y caramelo",
     "duracion": "9 - 11 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/28.jpg"
+    "imagen": "images/productos/28.jpg",
+    "agotado": false
   },
   {
     "id": 29,
@@ -297,7 +325,8 @@
     "aroma": "Mandarina, bergamota, jengibre y menta, con pera y azahar, sobre almizcle, ámbar y cedro",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/29.jpg"
+    "imagen": "images/productos/29.jpg",
+    "agotado": false
   },
   {
     "id": 30,
@@ -307,7 +336,8 @@
     "aroma": "Especias, bergamota y naranja, con coco, ylang ylang, ambroxan y mahonial, sobre sándalo, almizcle y benjuí",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/30.jpg"
+    "imagen": "images/productos/30.jpg",
+    "agotado": false
   },
   {
     "id": 31,
@@ -317,7 +347,8 @@
     "aroma": "Frutos rojos y mandarina, con vainilla, cacao y rosa, sobre azúcar, haba tonka, ámbar y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/31.jpg"
+    "imagen": "images/productos/31.jpg",
+    "agotado": false
   },
   {
     "id": 32,
@@ -327,7 +358,8 @@
     "aroma": "Piña, iris, jengibre y ciprés, con coco y notas amaderadas, sobre haba tonka, sándalo, ámbar y ámbar gris",
     "duracion": "10 - 12 Horas",
     "ml": "75 ml",
-    "imagen": "images/productos/32.jpg"
+    "imagen": "images/productos/32.jpg",
+    "agotado": false
   },
   {
     "id": 33,
@@ -337,7 +369,8 @@
     "aroma": "Piña y azafrán, con bálsamo de abeto y jazmín, sobre cedro, ámbar y agarwood (oud)",
     "duracion": "6 - 8 Horas",
     "ml": "90 ml",
-    "imagen": "images/productos/33.jpg"
+    "imagen": "images/productos/33.jpg",
+    "agotado": false
   },
   {
     "id": 34,
@@ -347,7 +380,8 @@
     "aroma": "Manzana, bergamota y jengibre, con lavanda, salvia, bayas de enebro y geranio, sobre haba tonka, cedro, madera ambarina y vetiver",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/34.jpg"
+    "imagen": "images/productos/34.jpg",
+    "agotado": false
   },
   {
     "id": 35,
@@ -357,7 +391,8 @@
     "aroma": "Bergamota, pimienta rosa y cardamomo, con guayaba, lavanda y jengibre, sobre incienso, palo santo y sándalo",
     "duracion": "7 - 9 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/35.jpg"
+    "imagen": "images/productos/35.jpg",
+    "agotado": false
   },
   {
     "id": 36,
@@ -367,7 +402,8 @@
     "aroma": "Manzana, lichi y rosa, con ciruela y jazmín, sobre musgo, vainilla y pachulí",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/36.jpg"
+    "imagen": "images/productos/36.jpg",
+    "agotado": false
   },
   {
     "id": 37,
@@ -377,7 +413,8 @@
     "aroma": "Pimienta rosa y bergamota, con rosa turca, rosa búlgara y jazmín, sobre agarwood (oud), ámbar y vainilla",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/37.jpg"
+    "imagen": "images/productos/37.jpg",
+    "agotado": false
   },
   {
     "id": 38,
@@ -387,7 +424,8 @@
     "aroma": "Leche de rosas, con merengue y almendra, sobre vainilla, sándalo y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/38.jpg"
+    "imagen": "images/productos/38.jpg",
+    "agotado": false
   },
   {
     "id": 39,
@@ -397,7 +435,8 @@
     "aroma": "Geranio y lavanda, con vainilla, salvia y jengibre, sobre vetiver y cedro",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/39.jpg"
+    "imagen": "images/productos/39.jpg",
+    "agotado": false
   },
   {
     "id": 40,
@@ -407,7 +446,8 @@
     "aroma": "Bergamota, limón y lavanda, con geranio, pimienta negra, cardamomo y salvia, sobre vetiver, cedro y almizcle",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/40.jpg"
+    "imagen": "images/productos/40.jpg",
+    "agotado": false
   },
   {
     "id": 41,
@@ -417,7 +457,8 @@
     "aroma": "Bergamota y heliotropo, con comino y especias aromáticas, sobre maderas y almizcle",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/41.jpg"
+    "imagen": "images/productos/41.jpg",
+    "agotado": false
   },
   {
     "id": 42,
@@ -427,7 +468,8 @@
     "aroma": "Naranja amarga, limón y frutos confitados, con jengibre, arándano, durazno, rosa búlgara, azahar de durazno, chicle y canela, sobre ambroxan, almizcle y cedro",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/42.jpg"
+    "imagen": "images/productos/42.jpg",
+    "agotado": false
   },
   {
     "id": 43,
@@ -437,7 +479,8 @@
     "aroma": "Canela, lavanda y mandarina, con iris, benjuí, ciprés y mahonial, sobre vainilla, haba tonka, ámbar, incienso, cedro y pachulí",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/43.jpg"
+    "imagen": "images/productos/43.jpg",
+    "agotado": false
   },
   {
     "id": 44,
@@ -447,7 +490,8 @@
     "aroma": "Canela y acorde místico, con nardo, jazmín, incienso y mahonial, sobre vainilla, almizcle y haba tonka",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/44.jpg"
+    "imagen": "images/productos/44.jpg",
+    "agotado": false
   },
   {
     "id": 45,
@@ -457,7 +501,8 @@
     "aroma": "Canela, nuez moscada y bergamota, con dátiles, praliné y tuberosa, sobre vainilla, haba tonka, madera de ámbar, mirra y benjuí",
     "duracion": "10 - 12 Horas",
     "ml": "100 ml + 200 ml spray",
-    "imagen": "images/productos/45.jpg"
+    "imagen": "images/productos/45.jpg",
+    "agotado": false
   },
   {
     "id": 46,
@@ -467,7 +512,8 @@
     "aroma": "Zanzíbar: lavanda y pimienta negra, con agua de coco, iris y sal, sobre incienso y vainilla · Clásico: pimienta negra, tabaco y piña, con pachulí, café e iris, sobre vainilla, ámbar y benjuí",
     "duracion": "6 - 8 Horas",
     "ml": "2 x 100 ml",
-    "imagen": "images/productos/46.jpg"
+    "imagen": "images/productos/46.jpg",
+    "agotado": false
   },
   {
     "id": 47,
@@ -477,7 +523,8 @@
     "aroma": "Bergamota y notas verdes, con melón, piña, notas gourmand y ámbar, sobre maderas, vainilla y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "80 ml",
-    "imagen": "images/productos/47.jpg"
+    "imagen": "images/productos/47.jpg",
+    "agotado": false
   },
   {
     "id": 48,
@@ -487,7 +534,8 @@
     "aroma": "Limón siciliano, naranja sanguina y jazmín, con cereza y heliotropo, sobre almizcle y cedro",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml + 2 lociones",
-    "imagen": "images/productos/48.jpg"
+    "imagen": "images/productos/48.jpg",
+    "agotado": false
   },
   {
     "id": 49,
@@ -497,7 +545,8 @@
     "aroma": "Toronja, bergamota, mandarina siciliana y enebro, con pimienta, romero y madera de rosa brasileña, sobre almizcle, incienso y musgo de roble",
     "duracion": "4 - 6 Horas",
     "ml": "125 ml + accesorios",
-    "imagen": "images/productos/49.jpg"
+    "imagen": "images/productos/49.jpg",
+    "agotado": false
   },
   {
     "id": 50,
@@ -507,7 +556,8 @@
     "aroma": "Bayas silvestres, cereza, naranja y bergamota, con rosa, flores blancas y vainilla, sobre notas empolvadas, almizcle y ámbar",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/50.jpg"
+    "imagen": "images/productos/50.jpg",
+    "agotado": false
   },
   {
     "id": 51,
@@ -517,7 +567,8 @@
     "aroma": "Ajenjo, con lavanda, pimienta blanca, jengibre y nuez moscada, sobre abeto, almizcle, sándalo y ámbar",
     "duracion": "4 - 6 Horas",
     "ml": "75 ml + 226 ml + 200 ml",
-    "imagen": "images/productos/51.jpg"
+    "imagen": "images/productos/51.jpg",
+    "agotado": false
   },
   {
     "id": 52,
@@ -527,7 +578,8 @@
     "aroma": "Kiwi, lichi rojo y membrillo, con chocolate blanco, ponqué, orquídea y jazmín, sobre almizcle, raíz de lirio y notas amaderadas",
     "duracion": "5 - 7 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/52.jpg"
+    "imagen": "images/productos/52.jpg",
+    "agotado": false
   },
   {
     "id": 53,
@@ -537,7 +589,8 @@
     "aroma": "Fresa y bergamota, con mermelada de cereza y cacao, sobre vainilla, ámbar y pachulí",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/53.jpg"
+    "imagen": "images/productos/53.jpg",
+    "agotado": true
   },
   {
     "id": 54,
@@ -547,7 +600,8 @@
     "aroma": "Manzana, canela, lavanda silvestre y bergamota, con azahar y lirio de los valles, sobre haba tonka, ámbar y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/54.jpg"
+    "imagen": "images/productos/54.jpg",
+    "agotado": false
   },
   {
     "id": 55,
@@ -557,7 +611,8 @@
     "aroma": "Limón, menta, grosella negra y pimienta rosa, con jengibre y manzana, sobre almizcle, ámbar e incienso",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/55.jpg"
+    "imagen": "images/productos/55.jpg",
+    "agotado": false
   },
   {
     "id": 56,
@@ -567,7 +622,8 @@
     "aroma": "Limón, mandarina, cardamomo y pimienta rosa, con lavanda, azahar, manzana verde y rosa, sobre almizcle, musgo, cedro y pachulí",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/56.jpg"
+    "imagen": "images/productos/56.jpg",
+    "agotado": false
   },
   {
     "id": 57,
@@ -577,7 +633,8 @@
     "aroma": "Mandarina, piña y manzana verde, con cedro, musgo de roble y vainilla, sobre caramelo, maderas secas, ámbar gris y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/57.jpg"
+    "imagen": "images/productos/57.jpg",
+    "agotado": false
   },
   {
     "id": 58,
@@ -587,7 +644,8 @@
     "aroma": "Piña y toronja, con higo y lavanda, sobre vainilla, pachulí y haba tonka",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/58.jpg"
+    "imagen": "images/productos/58.jpg",
+    "agotado": false
   },
   {
     "id": 59,
@@ -597,7 +655,8 @@
     "aroma": "Neroli, leche y bergamota, con flores blancas, flor de tiaré y ylang ylang, sobre coco, vainilla, láudano y madera de guayaco",
     "duracion": "7 - 9 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/59.jpg"
+    "imagen": "images/productos/59.jpg",
+    "agotado": false
   },
   {
     "id": 60,
@@ -607,7 +666,8 @@
     "aroma": "Violeta, notas marinas, hoja de plátano y petitgrain, con magnolia, tuberosa, violeta y pimienta, sobre incienso, sándalo, vainilla de Madagascar y mirra",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/60.jpg"
+    "imagen": "images/productos/60.jpg",
+    "agotado": false
   },
   {
     "id": 61,
@@ -617,7 +677,8 @@
     "aroma": "Durazno, manzana roja, gardenia y bambú, con jazmín, fresia y rosa, sobre vainilla, coco, orquídea, almizcle, ámbar y sándalo",
     "duracion": "5 - 7 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/61.jpg"
+    "imagen": "images/productos/61.jpg",
+    "agotado": false
   },
   {
     "id": 62,
@@ -627,7 +688,8 @@
     "aroma": "Ciruela, violeta, casis y anís, con tuberosa, azahar, ylang ylang, heliotropo y flor de tiaré, sobre incienso, vainilla, benjuí, sándalo y almizcle",
     "duracion": "8 - 10 Horas",
     "ml": "50 ml",
-    "imagen": "images/productos/62.jpg"
+    "imagen": "images/productos/62.jpg",
+    "agotado": false
   },
   {
     "id": 63,
@@ -637,7 +699,8 @@
     "aroma": "Frutos rojos y naranja, con malvavisco, jazmín y lirio de los valles, sobre vainilla, almizcle y musgo",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/63.jpg"
+    "imagen": "images/productos/63.jpg",
+    "agotado": true
   },
   {
     "id": 64,
@@ -647,7 +710,8 @@
     "aroma": "Durazno, bergamota, toronja y nuez moscada, con rosa, peonía rosa y violeta, sobre ámbar, almizcle, benjuí y vetiver",
     "duracion": "6+ Horas",
     "ml": "80 ml + miniatura",
-    "imagen": "images/productos/64.jpg"
+    "imagen": "images/productos/64.jpg",
+    "agotado": false
   },
   {
     "id": 65,
@@ -657,7 +721,8 @@
     "aroma": "Cardamomo, con lavanda e iris, sobre vainilla, notas orientales y maderas",
     "duracion": "8 - 10 Horas",
     "ml": "75 ml",
-    "imagen": "images/productos/65.jpg"
+    "imagen": "images/productos/65.jpg",
+    "agotado": false
   },
   {
     "id": 66,
@@ -667,7 +732,8 @@
     "aroma": "Lavanda y menta, con vainilla y benjuí, sobre miel, haba tonka y tabaco",
     "duracion": "10 - 12 Horas",
     "ml": "75 ml",
-    "imagen": "images/productos/66.jpg"
+    "imagen": "images/productos/66.jpg",
+    "agotado": false
   },
   {
     "id": 67,
@@ -677,7 +743,8 @@
     "aroma": "Bergamota, limón, lima, grosella negra, hoja de violeta y jengibre, con rosa, jazmín e iris, sobre ambroxan, almizcle, sándalo y cedro",
     "duracion": "8 - 10 Horas",
     "ml": "105 ml",
-    "imagen": "images/productos/67.jpg"
+    "imagen": "images/productos/67.jpg",
+    "agotado": false
   },
   {
     "id": 68,
@@ -687,7 +754,8 @@
     "aroma": "Notas marinas, frutos rojos y bergamota, con violeta, maderas blancas y sándalo, sobre almizcle, ambroxan y vetiver",
     "duracion": "7 - 9 Horas",
     "ml": "105 ml",
-    "imagen": "images/productos/68.jpg"
+    "imagen": "images/productos/68.jpg",
+    "agotado": false
   },
   {
     "id": 69,
@@ -699,7 +767,8 @@
     "ml": "100 ml",
     "imagen": "images/productos/69.jpg",
     "precioOriginal": 390,
-    "oferta": true
+    "oferta": true,
+    "agotado": false
   },
   {
     "id": 70,
@@ -709,7 +778,8 @@
     "aroma": "Disponible en 7 variantes: Mega, Mandarin Sky, Mandarin Sky Elixir, Go Mango, Candee, Greniaqua y Limoni — pregunta por el aroma disponible",
     "duracion": "Uso diario",
     "ml": "200 ml c/u",
-    "imagen": "images/productos/70.jpg"
+    "imagen": "images/productos/70.jpg",
+    "agotado": false
   },
   {
     "id": 71,
@@ -719,7 +789,8 @@
     "aroma": "Bayas silvestres, cereza y bergamota, con rosa y flores blancas, sobre vainilla y almizcle · Incluye perfume, decant, body lotion y body mist",
     "duracion": "6 - 8 Horas",
     "ml": "100+10+100+250 ml",
-    "imagen": "images/productos/71.jpg"
+    "imagen": "images/productos/71.jpg",
+    "agotado": false
   },
   {
     "id": 72,
@@ -729,7 +800,8 @@
     "aroma": "Durazno, toronja, litchi, jazmín, rosa y almizcle · Incluye perfume, decant, body lotion y body mist",
     "duracion": "6 Horas",
     "ml": "105+10+100+250 ml",
-    "imagen": "images/productos/72.jpg"
+    "imagen": "images/productos/72.jpg",
+    "agotado": false
   },
   {
     "id": 73,
@@ -739,7 +811,8 @@
     "aroma": "Azafrán y jazmín, con madera ambarina y ámbar gris, sobre resina de abeto y cedro · Incluye perfume, decant, body lotion y body mist",
     "duracion": "8 - 10 Horas",
     "ml": "105+10+100+250 ml",
-    "imagen": "images/productos/73.jpg"
+    "imagen": "images/productos/73.jpg",
+    "agotado": false
   },
   {
     "id": 74,
@@ -749,7 +822,8 @@
     "aroma": "Limón, piña, bergamota, grosella negra y manzana, con abedul, jazmín y rosa, sobre ámbar gris, almizcle, pachulí y vainilla · Incluye perfume, shower gel, body spray y shampoo",
     "duracion": "8 - 10 Horas",
     "ml": "105+100+50+250 ml",
-    "imagen": "images/productos/74.jpg"
+    "imagen": "images/productos/74.jpg",
+    "agotado": false
   },
   {
     "id": 75,
@@ -759,7 +833,8 @@
     "aroma": "Hojas verdes y manzana, con loto y mimosa, sobre almizcle, cedro, musgo de roble y ámbar",
     "duracion": "4 - 6 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/75.jpg"
+    "imagen": "images/productos/75.jpg",
+    "agotado": false
   },
   {
     "id": 76,
@@ -769,7 +844,8 @@
     "aroma": "Azafrán y jazmín, con madera ambarina y ámbar gris, sobre resina de abeto y cedro",
     "duracion": "8 - 10 Horas",
     "ml": "105 ml",
-    "imagen": "images/productos/76.jpg"
+    "imagen": "images/productos/76.jpg",
+    "agotado": false
   },
   {
     "id": 77,
@@ -779,6 +855,7 @@
     "aroma": "Bergamota, lichi y notas frutales, con jazmín, rosas y canela, sobre cedro, sándalo, ámbar, almizcle y vainilla",
     "duracion": "6 - 8 Horas",
     "ml": "100 ml",
-    "imagen": "images/productos/77.jpg"
+    "imagen": "images/productos/77.jpg",
+    "agotado": false
   }
 ]
