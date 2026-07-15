@@ -304,17 +304,34 @@ clearSearchBtn.addEventListener("click", () => {
 });
 
 // ============================================================
-// CARGA DE DATOS: data/productos.json
+// CARGA DE DATOS: base de datos compartida (Google Sheets) con respaldo local
 // ============================================================
+// Anita Perfumería y Parfum Art comparten el mismo inventario de perfumes.
+// Los datos viven en una Google Sheet, expuesta como JSON a través de un
+// Apps Script. Si por cualquier motivo esa fuente no responde, el catálogo
+// no se rompe: usa data/productos.json (la última copia local guardada)
+// como respaldo automático.
+const URL_API_PRODUCTOS = "https://script.google.com/macros/s/AKfycbxpvtdduh5bt8EwERI5t9cegc_F2-f3_nZZ5Qaf8dwaCg_AZwxe6GTT0EVTQ4goRJKK/exec";
+
 async function cargarProductos() {
     try {
-        const res = await fetch("data/productos.json");
-        if (!res.ok) throw new Error("No se pudo cargar productos.json");
+        const res = await fetch(URL_API_PRODUCTOS);
+        if (!res.ok) throw new Error("Respuesta no válida de la API de productos");
         perfumes = await res.json();
+        if (!Array.isArray(perfumes) || perfumes.length === 0) {
+            throw new Error("La API de productos devolvió una lista vacía");
+        }
     } catch (err) {
-        console.error("Error cargando el catálogo:", err);
-        resultsCount.textContent = "No se pudo cargar el catálogo. Intenta recargar la página.";
-        return;
+        console.warn("No se pudo cargar desde la base compartida, usando respaldo local:", err);
+        try {
+            const resLocal = await fetch("data/productos.json");
+            if (!resLocal.ok) throw new Error("No se pudo cargar productos.json");
+            perfumes = await resLocal.json();
+        } catch (errLocal) {
+            console.error("Error cargando el catálogo:", errLocal);
+            resultsCount.textContent = "No se pudo cargar el catálogo. Intenta recargar la página.";
+            return;
+        }
     }
     populateBrandFilter();
     renderPriceChips();
